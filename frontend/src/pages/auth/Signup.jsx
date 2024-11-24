@@ -1,4 +1,3 @@
-// frontend/src/pages/auth/Signup.jsx
 import React, { useState } from "react";
 import "./auth.css";
 
@@ -28,9 +27,9 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h1>Signup</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="auth-container">
+      <form className="auth-form" onSubmit={handleSubmit}>
+        <h1>Signup</h1>
         <input
           type="text"
           placeholder="Name"
@@ -53,6 +52,9 @@ const Signup = () => {
           required
         />
         <button type="submit">Signup</button>
+        <p>
+          Already have an account? <a href="/login">Login</a>
+        </p>
       </form>
     </div>
   );
