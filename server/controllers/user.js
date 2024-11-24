@@ -74,6 +74,7 @@ export const verifyUser = TryCatch(async (req, res) => {
   });
 });
 
+// server/controllers/user.js
 export const loginUser = TryCatch(async (req, res) => {
   const { email, password } = req.body;
 
@@ -84,11 +85,11 @@ export const loginUser = TryCatch(async (req, res) => {
       message: "No User with this email",
     });
 
-  const mathPassword = await bcrypt.compare(password, user.password);
+  const matchPassword = await bcrypt.compare(password, user.password);
 
-  if (!mathPassword)
+  if (!matchPassword)
     return res.status(400).json({
-      message: "wrong Password",
+      message: "Wrong Password",
     });
 
   const token = jwt.sign({ _id: user._id }, process.env.Jwt_Sec, {
@@ -98,9 +99,10 @@ export const loginUser = TryCatch(async (req, res) => {
   res.json({
     message: `Welcome back ${user.name}`,
     token,
-    user,
+    role: user.role, // Send role to frontend
   });
 });
+
 
 export const myProfile = TryCatch(async (req, res) => {
   const user = await User.findById(req.user._id);

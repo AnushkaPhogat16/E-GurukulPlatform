@@ -1,3 +1,4 @@
+// server/middlewares/isAuth.js
 import jwt from "jsonwebtoken";
 import { User } from "../models/User.js";
 
@@ -22,6 +23,7 @@ export const isAuth = async (req, res, next) => {
   }
 };
 
+// Ensure only Admins can access
 export const isAdmin = (req, res, next) => {
   try {
     if (req.user.role !== "admin")
