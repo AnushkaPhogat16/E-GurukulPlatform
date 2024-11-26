@@ -1,8 +1,6 @@
-// frontend/src/pages/auth/Login.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./auth.css";
-
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +19,7 @@ const Login = () => {
       const data = await res.json();
       if (res.ok) {
         localStorage.setItem("token", data.token);
-        localStorage.setItem("role", data.role); // Save role for navigation
+        localStorage.setItem("role", data.role);
         alert(data.message);
         navigate("/");
       } else {
@@ -33,9 +31,9 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="auth-container">
+      <form className="auth-form" onSubmit={handleSubmit}>
+        <h1>Login</h1>
         <input
           type="email"
           placeholder="Email"
@@ -51,6 +49,9 @@ const Login = () => {
           required
         />
         <button type="submit">Login</button>
+        <p>
+          Don't have an account? <a href="/signup">Signup</a>
+        </p>
       </form>
     </div>
   );
