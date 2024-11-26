@@ -19,12 +19,12 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f4f8;
+  background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
   padding: 20px;
 }
 
 .auth-form {
-  background: #fff;
+  background: linear-gradient(135deg, #f0f4ff, #d9e4ff);;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 30px;
@@ -35,7 +35,7 @@ body {
 .auth-form h1 {
   margin-bottom: 20px;
   font-size: 1.8rem;
-  color: #333;
+  color: #283593;
   text-align: center;
 }
 
