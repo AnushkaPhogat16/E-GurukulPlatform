@@ -15,13 +15,18 @@ const Login = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
-
+  
       const data = await res.json();
       if (res.ok) {
         localStorage.setItem("token", data.token);
         localStorage.setItem("role", data.role);
         alert(data.message);
-        navigate("/");
+  
+        if (data.role === "admin") {
+          navigate("/admin"); // Redirect to admin home page
+        } else {
+          navigate("/student"); // Redirect to student home page
+        }
       } else {
         alert(data.message);
       }
@@ -29,6 +34,7 @@ const Login = () => {
       console.error(error);
     }
   };
+  
 
   return (
     <div className="auth-container">

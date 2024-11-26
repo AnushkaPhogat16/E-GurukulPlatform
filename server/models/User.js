@@ -17,17 +17,13 @@ const schema = new mongoose.Schema(
     },
     role: {
       type: String,
-      default: "user",
+      enum: ["student", "admin"], // Explicitly define possible roles
+      default: "student",        // Default role is 'student'
     },
-    mainrole: {
-      type: String,
-      default: "user",
-    },
-    
-    resetPasswordExpire: Date,
+    resetPasswordExpire: Date,   // To handle password reset functionality
   },
   {
-    timestamps: true,
+    timestamps: true,            // Automatically manage `createdAt` and `updatedAt`
   }
 );
 
