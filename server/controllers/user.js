@@ -51,28 +51,35 @@ export const register = TryCatch(async (req, res) => {
 export const verifyUser = TryCatch(async (req, res) => {
   const { otp, activationToken } = req.body;
 
-  const verify = jwt.verify(activationToken, process.env.Activation_Secret);
+  try {
+    const verify = jwt.verify(activationToken, process.env.Activation_Secret);
 
-  if (!verify)
-    return res.status(400).json({
-      message: "Otp Expired",
+    if (!verify)
+      return res.status(400).json({
+        message: "OTP Expired",
+      });
+
+    if (parseInt(verify.otp) !== parseInt(otp))
+      return res.status(400).json({
+        message: "Incorrect OTP",
+      });
+
+    // Create user after OTP is verified
+    await User.create({
+      name: verify.user.name,
+      email: verify.user.email,
+      password: verify.user.password,
     });
 
-  if (verify.otp !== otp)
-    return res.status(400).json({
-      message: "Wrong Otp",
+    res.json({
+      message: "User successfully registered!",
     });
-
-  await User.create({
-    name: verify.user.name,
-    email: verify.user.email,
-    password: verify.user.password,
-  });
-
-  res.json({
-    message: "User Registered",
-  });
+  } catch (error) {
+    console.error("Verification Error:", error.message); // Log errors for debugging
+    res.status(500).json({ message: "Something went wrong during verification." });
+  }
 });
+
 
 // server/controllers/user.js
 export const loginUser = TryCatch(async (req, res) => {
