@@ -1,10 +1,31 @@
 import React from "react";
+import "./studentHome.css";
 
 const StudentHome = () => {
+  const features = [
+    { label: "Take MCQ Test", icon: "📚", link: "/take-mcq-test" },
+    { label: "Check Performance Report", icon: "📊", link: "/performance-report" },
+    { label: "Ask Doubts", icon: "❓", link: "/ask-doubts" },
+    { label: "Check Attendance", icon: "✔️", link: "/attendance" },
+    { label: "Attend Lecture", icon: "🎥", link: "/attend-lecture" },
+  ];
+
   return (
-    <div>
-      <h1>Welcome, Student!</h1>
-      <p>This is the student dashboard.</p>
+    <div className="student-dashboard">
+      <h1 className="dashboard-title">Welcome, Student!</h1>
+      <p className="dashboard-subtitle">Your learning journey starts here.</p>
+      <div className="feature-container">
+        {features.map((feature, index) => (
+          <div
+            className="feature-card"
+            key={index}
+            onClick={() => (window.location.href = feature.link)}
+          >
+            <div className="feature-icon">{feature.icon}</div>
+            <p className="feature-label">{feature.label}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
