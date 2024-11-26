@@ -10,7 +10,7 @@ export const Header = () => {
       <div className="header-content">
         <h1 className="header-title">E-Gurukul</h1>
         <nav className="nav-links">
-          <Link to="/">Home</Link>
+          <Link to="/student">Home</Link>
           {role === 'admin' && <Link to="/admin-dashboard">Admin</Link>}
           {role === 'teacher' && <Link to="/teacher-dashboard">Teacher</Link>}
           {role === 'user' && <Link to="/my-courses">My Courses</Link>}

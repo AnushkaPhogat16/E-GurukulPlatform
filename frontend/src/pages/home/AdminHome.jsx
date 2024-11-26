@@ -5,7 +5,7 @@ const AdminHome = () => {
   const features = [
     { label: "Grade Tests", icon: "📝", link: "/grade-tests" },
     { label: "Check Attendance", icon: "📋", link: "/check-attendance" },
-    { label: "Host Class", icon: "📡", link: "/host-class" },
+    { label: "Host Class", icon: "📡", link: "/admin/host-class" },
   ];
 
   return (

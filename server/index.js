@@ -14,10 +14,12 @@ app.use(cors());
 // Import routes
 import userRoutes from './routes/user.js';
 import adminRoutes from './routes/admin.js'; // Ensure this file exists
+import classRoutes from './routes/classRoutes.js'; // Import new class routes
 
 // Application routes
 app.use('/api', userRoutes);
 app.use('/api/admin', adminRoutes); // Use admin routes here
+app.use('/api/classes', classRoutes); // Add class routes for hosting and joining classes
 
 // Static files
 app.use('/uploads', express.static('uploads'));

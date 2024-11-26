@@ -3,11 +3,11 @@ import "./studentHome.css";
 
 const StudentHome = () => {
   const features = [
-    { label: "Take MCQ Test", icon: "📚", link: "/take-mcq-test" },
+    { label: "Take MCQ Test", icon: "📚", link: "/student/test-app" },
     { label: "Check Performance Report", icon: "📊", link: "/performance-report" },
     { label: "Ask Doubts", icon: "❓", link: "/ask-doubts" },
     { label: "Check Attendance", icon: "✔️", link: "/attendance" },
-    { label: "Attend Lecture", icon: "🎥", link: "/attend-lecture" },
+    { label: "Attend Lecture", icon: "🎥", link: "/student/join-class" },
   ];
 
   return (
