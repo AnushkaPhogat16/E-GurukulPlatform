@@ -1,0 +1,89 @@
+/* Background and Layout */
+.grade-tests {
+    background: linear-gradient(135deg, #f0f4ff, #d9e4ff); /* Light blue gradient background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  
+  .grade-tests h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #283593; /* Dark blue */
+    margin-bottom: 20px;
+  }
+  
+  .grade-tests .loading,
+  .grade-tests .error {
+    font-size: 1.2rem;
+    color: #ff5722; /* Red color for error */
+    margin-top: 20px;
+  }
+  
+  /* Table Layout */
+  .grade-tests table {
+    width: 80%;
+    margin-top: 30px;
+    border-collapse: collapse;
+  }
+  
+  .grade-tests table th,
+  .grade-tests table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .grade-tests table th {
+    background-color: #283593; /* Dark blue */
+    color: white;
+  }
+  
+  .grade-tests table td {
+    background-color: #fff;
+  }
+  
+  .grade-tests table tr:hover {
+    background-color: #f5f5f5; /* Light grey hover */
+  }
+  
+  /* Button Style */
+  .grade-tests button {
+    background-color: #fbc02d; /* Bright yellow */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .grade-tests button:hover {
+    background-color: #ff9800; /* Darker yellow on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .grade-tests table {
+      width: 100%;
+    }
+  
+    .grade-tests h2 {
+      font-size: 2rem;
+    }
+  
+    .grade-tests table th,
+    .grade-tests table td {
+      font-size: 0.9rem;
+    }
+  
+    .grade-tests button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  

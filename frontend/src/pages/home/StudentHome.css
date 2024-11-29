@@ -1,0 +1,84 @@
+/* Background and Layout */
+.student-dashboard {
+    background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .dashboard-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #283593; /* Matches the header styling */
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* Feature Cards Layout */
+  .feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Individual Feature Cards */
+  .feature-card {
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Icons */
+  .feature-icon {
+    font-size: 3rem;
+    color: #fbc02d; /* Golden yellow */
+    margin-bottom: 10px;
+  }
+  
+  .feature-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #283593;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .feature-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .student-dashboard{
+    width: 100vw;
+  }
+
