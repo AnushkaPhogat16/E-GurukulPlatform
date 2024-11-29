@@ -1,25 +1,16 @@
+// server/models/Test.js
 import mongoose from 'mongoose';
 
 const testSchema = new mongoose.Schema({
-  name: {
+  testName: {
     type: String,
     required: true
   },
-  questions: [{
-    question: String,
-    options: [String],
-    correctAnswer: String
-  }],
   grade: {
     type: String,
-    default: null  // Initially, no grade is set
+    required: true
   },
-  studentId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
-  }
+  students: [String]  // Array of student names or IDs
 });
 
-const Test = mongoose.model('Test', testSchema);
-
-export { Test };
+export const Test = mongoose.model('Test', testSchema);
