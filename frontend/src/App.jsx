@@ -9,6 +9,7 @@ import { Header } from "./components/header/Header";
 import TestApp from "./pages/home/TestApp";
 import JoinClass from "./pages/home/JoinClass";
 import HostClass from "./pages/home/HostClass";
+import Attendance from "./pages/home/Attendance"; // Import the new Attendance component
 
 const App = () => {
   return (
@@ -23,7 +24,7 @@ const App = () => {
         <Route path="/student/test-app" element={<TestApp />} />
         <Route path="/student/join-class" element={<JoinClass />} />
         <Route path="/admin/host-class" element={<HostClass />} />
-
+        <Route path="/attendance" element={<Attendance />} /> {/* Add the Attendance route */}
       </Routes>
     </BrowserRouter>
   );

@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./studentHome.css";
 
 const StudentHome = () => {
+  const navigate = useNavigate();
+
   const features = [
     { label: "Take MCQ Test", icon: "📚", link: "/student/test-app" },
     { label: "Check Performance Report", icon: "📊", link: "/performance-report" },
@@ -19,7 +22,7 @@ const StudentHome = () => {
           <div
             className="feature-card"
             key={index}
-            onClick={() => (window.location.href = feature.link)}
+            onClick={() => navigate(feature.link)}
           >
             <div className="feature-icon">{feature.icon}</div>
             <p className="feature-label">{feature.label}</p>
