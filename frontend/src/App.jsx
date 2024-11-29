@@ -10,8 +10,9 @@ import TestApp from "./pages/home/TestApp";
 import JoinClass from "./pages/home/JoinClass";
 import HostClass from "./pages/home/HostClass";
 import Attendance from "./pages/home/Attendance";
-import PerformanceReport from "./pages/home/PerformanceReport"; // Import PerformanceReport
-
+import PerformanceReport from "./pages/home/PerformanceReport";
+import GradeTests from "./pages/home/GradeTests"; // Import GradeTests here
+import CheckAttendance from "./pages/home/Attendance";
 const App = () => {
   return (
     <BrowserRouter>
@@ -26,7 +27,9 @@ const App = () => {
         <Route path="/student/join-class" element={<JoinClass />} />
         <Route path="/admin/host-class" element={<HostClass />} />
         <Route path="/attendance" element={<Attendance />} />
-        <Route path="/performance-report" element={<PerformanceReport />} /> {/* Add this */}
+        <Route path="/performance-report" element={<PerformanceReport />} /> {/* Existing route */}
+        <Route path="/grade-tests" element={<GradeTests />} /> {/* Add this route */}
+        <Route path="/check-attendance" element={<CheckAttendance />} /> {/* Add CheckAttendance Route */}
       </Routes>
     </BrowserRouter>
   );
