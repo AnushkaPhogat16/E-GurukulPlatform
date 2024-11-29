@@ -2,7 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { connectDb } from './database/db.js';
 import cors from 'cors';
-
+import bodyParser from 'body-parser';
+import performanceRoutes from './routes/performance.js'; // Import the performance routes
 dotenv.config(); // Load environment variables
 
 const app = express(); // Initialize app
@@ -10,15 +11,18 @@ const app = express(); // Initialize app
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.json());
 
 // Import routes
 import userRoutes from './routes/user.js';
 import adminRoutes from './routes/admin.js'; // Ensure this file exists
+import classRoutes from './routes/classRoutes.js'; // Import new class routes
 
 // Application routes
 app.use('/api', userRoutes);
 app.use('/api/admin', adminRoutes); // Use admin routes here
-
+app.use('/api/classes', classRoutes); // Add class routes for hosting and joining classes
+app.use('/api/performance', performanceRoutes); // Use the performance routes
 // Static files
 app.use('/uploads', express.static('uploads'));
 
