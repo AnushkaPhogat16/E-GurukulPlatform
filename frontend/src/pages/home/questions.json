@@ -1,0 +1,78 @@
+[
+    {
+      "question": "What is the time complexity of searching in a balanced binary search tree?",
+      "options": ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is a primary key characteristic in a relational database?",
+      "options": [
+        "It allows null values",
+        "It ensures each record is unique",
+        "It can be duplicated",
+        "It only stores numeric data"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What does the acronym CPU stand for?",
+      "options": [
+        "Central Processing Unit",
+        "Computer Peripheral Unit",
+        "Core Programming Utility",
+        "Central Programming Unit"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which data structure is used for implementing recursion?",
+      "options": ["Queue", "Stack", "Array", "Heap"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the output of 2 + 3 * 4 in most programming languages?",
+      "options": ["20", "14", "11", "17"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following best describes polymorphism in object-oriented programming?",
+      "options": [
+        "One object can take many forms",
+        "Data hiding",
+        "Inheritance of properties",
+        "Code reusability"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the primary purpose of a compiler?",
+      "options": [
+        "To execute programs directly",
+        "To translate source code into machine code",
+        "To manage memory allocation",
+        "To debug the program"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which sorting algorithm has the best average-case time complexity?",
+      "options": ["Bubble Sort", "Quick Sort", "Merge Sort", "Selection Sort"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What does HTTP stand for?",
+      "options": [
+        "HyperText Transfer Protocol",
+        "HyperText Transmission Protocol",
+        "Hyperlink Transfer Protocol",
+        "Hyperlink Text Protocol"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "In computer networks, which topology connects all devices to a single central hub?",
+      "options": ["Ring Topology", "Bus Topology", "Star Topology", "Mesh Topology"],
+      "correctAnswer": 2
+    }
+  ]
+  
